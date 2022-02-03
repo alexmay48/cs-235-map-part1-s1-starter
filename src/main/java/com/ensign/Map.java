@@ -76,11 +76,11 @@ public class Map {
 	 */
 	public void createLocations(int numOfLocations) {
 		// FIXME: Create the locations to be placed onto the map.
-		
+
 		// TODO: Create the "Airport" object that extends Location
-		
+
 		// TODO: Create the "TrainStation" object that extends Location
-		
+
 		// TODO: Create the "ParkingSpot" object that extends Location
 	}
 
@@ -104,13 +104,13 @@ public class Map {
 	public void findQuickestPath() {
 		long startTime = System.nanoTime();
 
-		longestLocations = findQuickestPath(locations);
+		quickestLocations = findQuickestPath(locations);
 
 		long endTime = System.nanoTime();
 		long time = endTime - startTime;
 
-		Location loc1 = longestLocations.get(0);
-		Location loc2 = longestLocations.get(1);
+		Location loc1 = quickestLocations.get(0);
+		Location loc2 = quickestLocations.get(1);
 
 		double travelTime = loc1.travelTimeToLocation(loc2);
 		double distance = loc1.distanceBetweenLocation(loc2);
@@ -122,13 +122,13 @@ public class Map {
 	public void findLongestPath() {
 		long startTime = System.nanoTime();
 
-		quickestLocations = findLongestPath(locations);
+		longestLocations = findLongestPath(locations);
 
 		long endTime = System.nanoTime();
 		long time = endTime - startTime;
 
-		Location loc1 = quickestLocations.get(0);
-		Location loc2 = quickestLocations.get(1);
+		Location loc1 = longestLocations.get(0);
+		Location loc2 = longestLocations.get(1);
 
 		double travelTime = loc1.travelTimeToLocation(loc2);
 		double distance = loc1.distanceBetweenLocation(loc2);
